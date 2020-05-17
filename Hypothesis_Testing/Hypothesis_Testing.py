@@ -1,4 +1,5 @@
 
+# @author Shikha
 # Here I am applying hypothesis testing to check which feature is more important for a particular SDG goal. 
 # I am taking two SDG goals here which are--
 # 1)"Proportion of students at the end of lower secondary education achieving at least a minimum proficiency level in reading, both sexes"
@@ -148,7 +149,7 @@ def main(argv):
 			FB_var = k[1][1]
 			return (FB_var[0],(yr_2015[0],FB_var[1]))
 
-		# Merge all SDG goal output with Feedback variable data
+		# Merge all SDG goal output with Feedback variable data 
 		merge_year_2018_data = mapped_sdg_data.join(filter_FB_2018).map(lambda k:merge_2018(k))
 		merge_year_2015_data = mapped_sdg_data.join(filter_FB_2015).map(lambda k:merge_2015(k))
 

@@ -1,6 +1,6 @@
 
 ### Team Members:- 
-1) Shikha gupta -- 112959034
+1) Shikha Gupta -- 112959034
 2) Aakash Deep
 3) Harshit - 112687784
 4) Rishabh Goel
@@ -23,7 +23,7 @@ Data is always stored on  the hdfs with replication=3. Used for the distributed 
 
 ### Concepts:-     
 1) Hypothesis Testing					
-Here for any given goal completion, we have tried to pick top 20 and bottom 20 features which affect the completion of goal most.
+Here for any given goal completion, we have tried to pick top 20 and bottom 20 features which affect the completion of goal most/least.
 we have used spark and code is written in Hypothesis_Testing.py
 
 2) Locality Sensitive Hashing
