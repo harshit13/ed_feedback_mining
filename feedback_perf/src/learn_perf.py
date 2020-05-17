@@ -466,15 +466,15 @@ if __name__ == "__main__":
     files = ['hdfs:/data/cy6_ms_cmb_stu_qqq.csv', 'hdfs:/data/cy07_msu_stu_qqq.csv']
 
     print('[START] Preprocessing files')
-    # dfs = preprocess(files)
+    dfs = preprocess(files)
     print('[END] Preprocessing files')
 
     feat, tar = 'features', 'target'
     print('[START] Merging dfs')
-    # num_files = mergeAll(dfs, feat, tar)
+    num_files = mergeAll(dfs, feat, tar)
     print('[END] Merging dfs')
 
-    num_files=31
+    # num_files=31
     print('[START] Tensorflow')
     # train_and_eval(num_files, feat, tar)
     train_and_eval(feat+'.csv', tar+'.csv')
