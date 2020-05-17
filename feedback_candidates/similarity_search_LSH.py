@@ -1,5 +1,13 @@
 '''
-    author Rishabh Goel and Aakash Deep
+
+### Team Members:- 
+1) Shikha Gupta -- 112959034
+2) Aakash Deep -- 112964531
+3) Harshit -- 112687784
+4) Rishabh Goel -- 112714848
+
+
+    @author Rishabh Goel and Aakash Deep
     CSE544 Spring 2020 Project
 Motivation: FINDING SIMILAR SCHOOLS AND AREAS TO SUGGEST INSIGHTS
     FOR SDG 4
