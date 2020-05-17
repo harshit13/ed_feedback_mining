@@ -2,13 +2,28 @@
 # @author Shikha
 # Here I am applying hypothesis testing to check which feature is more important for a particular SDG goal. 
 # I am taking two SDG goals here which are--
-# 1)"Proportion of students at the end of lower secondary education achieving at least a minimum proficiency level in reading, both sexes"
-# 2)"Proportion of students at the end of lower secondary education achieving at least a minimum proficiency level in mathematics, both sexes"
+# 1) "Proportion of students at the end of lower secondary education achieving at least a minimum proficiency level in reading, both sexes"
+# 2) "Proportion of students at the end of lower secondary education achieving at least a minimum proficiency level in mathematics, both sexes"
 # Here features are like What is the <highest level of schooling> completed by your father?, How many books are there in your home? etc
 # As there are some categorical features as well so have used one hot encoding for data manipulation
 # And as Y label, I have scores for each goal for each year for each country, only taking data of year 2015 and 2018
 # I took top 20 most co-related and  bottom 20 least co-related features and calculated their P-value
 # Platform used to run this code is Google Cloud DataProc running Ubuntu
+
+'''
+System Used:
+    GCP cluster with 1 master node 2 worker node
+    Image Version:  1.4 (Debian 9, Hadoop 2.9, Spark 2.4)
+    Master node             Standard (1 master, N workers)
+    Machine type            e2-standard-2
+    Primary disk type     pd-standard
+    Primary disk size      64GB
+    Worker nodes            2
+    Machine type            e2-highmem-4
+    Primary disk type       pd-standard
+    Primary disk size       32GB
+'''
+
 import sys
 import numpy as np
 import math
@@ -35,8 +50,6 @@ def main(argv):
 				return True
 			else:
 				return False
-
-		# print(rdd_SDG_data.collect())
 
 		# Here Mapping data for a (country, (year, value))
 		def map_cntry_year(x):
@@ -65,10 +78,6 @@ def main(argv):
 		#list down all countries having data points, total 57 country are there
 		list_cntry_code = mapped_sdg_data.map(lambda x:x[0]).collect()
 		brdcast_cntry = sc.broadcast(list_cntry_code)
-
-		# print(len(list_cntry_code))
-
-		# print(mapped_sdg_data.collect())
 
 		# Feedback variable files for year 2018 of students
 		rdd_fb_data_2018 = sc.textFile('hdfs:/data/cy07_msu_stu_qqq.csv')
@@ -156,7 +165,6 @@ def main(argv):
 		# Merged all years data with key value as Feedback variable name and in output, (Feedback var, [(goalval, Feedback_var value) for each country])
 		total_merge_data = merge_year_2015_data.join(merge_year_2018_data).groupByKey()\
 							.map(lambda x : (x[0], list(x[1])))
-		# print(total_merge_data.take(2))
 
 
 		# Standandardize data to calculate Beta value for each Feedback variable
