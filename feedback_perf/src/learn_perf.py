@@ -1,4 +1,11 @@
 '''
+### Team Members:- 
+1) Shikha Gupta -- 112959034
+2) Aakash Deep -- 112964531
+3) Harshit -- 112687784
+4) Rishabh Goel -- 112714848
+
+
 @author Harshit
 
 CSE544 Spring 2020 Project
