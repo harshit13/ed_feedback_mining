@@ -1,4 +1,13 @@
 '''
+
+### Team Members:- 
+1) Shikha Gupta -- 112959034
+2) Aakash Deep -- 112964531
+3) Harshit -- 112687784
+4) Rishabh Goel -- 112714848
+
+
+
 # @author Shikha
 # Here I am applying hypothesis testing to check which feature is more important for a particular SDG goal. 
 # I am taking two SDG goals here which are--
