@@ -1,4 +1,4 @@
-
+'''
 # @author Shikha
 # Here I am applying hypothesis testing to check which feature is more important for a particular SDG goal. 
 # I am taking two SDG goals here which are--
@@ -10,7 +10,11 @@
 # I took top 20 most co-related and  bottom 20 least co-related features and calculated their P-value
 # Platform used to run this code is Google Cloud DataProc running Ubuntu
 
-'''
+Concepts used:
+	- PySpark : rdd
+	- Hypothesis Testing [see from line no 220]
+
+
 System Used:
     GCP cluster with 1 master node 2 worker node
     Image Version:  1.4 (Debian 9, Hadoop 2.9, Spark 2.4)
