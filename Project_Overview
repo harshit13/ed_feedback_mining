@@ -1,9 +1,9 @@
 
 ### Team Members:- 
 1) Shikha Gupta -- 112959034
-2) Aakash Deep
-3) Harshit - 112687784
-4) Rishabh Goel
+2) Aakash Deep -- 112964531
+3) Harshit -- 112687784
+4) Rishabh Goel -- 112714848
 
 
 ### General Description of the project:-  
@@ -27,12 +27,20 @@ Here for any given goal completion, we have tried to pick top 20 and bottom 20 f
 we have used spark and code is written in Hypothesis_Testing.py
 
 2) Locality Sensitive Hashing
+Here we tried to find similar schools and areas from students feedback about school.
 
 3) Deep Learning
 Here we train we custom designed Feed forward NN architecture using Keras Dense Layers.
 Train using distributed tensorflow (MirroredStrategy and MultiWorkerMirroredStrategy).
 
+Packages used:
 
+PISA dataset files were in sas7bdat format which was converted to CSV format using the following package. 
+sas7bdat · PyPI (https://pypi.org/project/sas7bdat/)
 
+numpy
+scipy
+pyspark
+tensorflow
 
 
