@@ -19,7 +19,7 @@ Data Frames: - 1) Spark
 			   		we have used spark, Tensorflow (MirroredStrategy - Synchronous All Reduce) and code is written in learn_perf.py ( train_and_eval method)
 
 			   3) HDFS
-			   		Data is always stored on  the hdfs with replication=3. This in distributed processing for spark.
+			   		Data is always stored on  the hdfs with replication=3. Used for the distributed processing for spark.
 
 Concepts:-     1) Hypothesis Testing
 					
