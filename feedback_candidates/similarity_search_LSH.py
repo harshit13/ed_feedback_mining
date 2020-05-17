@@ -16,7 +16,7 @@ Approach:
 Data Pipeline and algo used
     - PySpark -  to use rdd and apply transformation
     - HDFS - replication factor=3 [For Spark Processing on GCP Data Proc]
-    - Similarity search using LSH
+    - Similarity search using LSH [See from line no. 122]
 
 System Used:
     GCP cluster with 1 master node 2 worker node
