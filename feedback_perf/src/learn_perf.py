@@ -20,9 +20,9 @@ Approach:
     - Ouput the tensorboard graph
 Data Pipeline and algo used
     - PySpark - used dataframe context instead of older RDD context
-    - HDFS - repliction factor=3
+    - HDFS - repliction factor=3 [For Spark Processing on GCP Data Proc]
     - Tensorflow - distributed mirrored strategy
-    - Deep Learning
+    - Deep Learning - [GCP Compute Engine VM with 2 GPUS nvidia t4]
 '''
 
 from pyspark.sql import *
@@ -463,7 +463,7 @@ def train_and_eval(feat, tar):
 
 
 if __name__ == "__main__":
-    files = ['cy6_ms_cmb_stu_qqq.csv', 'cy07_msu_stu_qqq.csv']
+    files = ['hdfs:/data/cy6_ms_cmb_stu_qqq.csv', 'hdfs:/data/cy07_msu_stu_qqq.csv']
 
     print('[START] Preprocessing files')
     # dfs = preprocess(files)
