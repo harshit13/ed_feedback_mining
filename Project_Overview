@@ -1,37 +1,36 @@
 
-Team Members:- 1) Shikha gupta -- 112959034
-			   2) Aakash Deep
-			   3) Harshit - 112687784
-			   4) Rishabh Goel
+### Team Members:- 
+1) Shikha gupta -- 112959034
+2) Aakash Deep
+3) Harshit - 112687784
+4) Rishabh Goel
 
 
-General Description of the project:-  We have student's Feedback data which has information about student, student's family and student's background
-									  and student's performance data which says about school facilities and student's performance in many subjects.
+### General Description of the project:-  
+We have student's Feedback data which has information about student, student's family and student's background and student's performance data which says about school facilities and student's performance in many subjects.
 
 
-Data Frames: - 1) Spark
-				
-					As data is very large around 20 GB, to handle it distributedly, we are using spark framework throughout the project.
+### Data Frames: - 
+1) Spark
+As data is very large around 20 GB, to handle it distributedly, we are using spark framework throughout the project.
 
-			   2) Tensorflow
-			   
-			   		Here we are using student's Feedback data (X) and their performance data (Y) to train our model and predict performances in Subject based on students feed_back data
-			   		we have used spark, Tensorflow (MirroredStrategy - Synchronous All Reduce) and code is written in learn_perf.py ( train_and_eval method)
+2) Tensorflow
+Here we are using student's Feedback data (X) and their performance data (Y) to train our model and predict performances in Subject based on students feed_back data
+We have used spark, Tensorflow (MirroredStrategy - Synchronous All Reduce) and code is written in learn_perf.py ( train_and_eval method)
 
-			   3) HDFS
-			   		Data is always stored on  the hdfs with replication=3. Used for the distributed processing for spark.
+3) HDFS
+Data is always stored on  the hdfs with replication=3. Used for the distributed processing for spark.
 
-Concepts:-     1) Hypothesis Testing
-					
-					Here for any given goal completion, we have tried to pick top 20 and bottom 20 features which affect the completion of goal most.
-					we have used spark and code is written in Hypothesis_Testing.py
+### Concepts:-     
+1) Hypothesis Testing					
+Here for any given goal completion, we have tried to pick top 20 and bottom 20 features which affect the completion of goal most.
+we have used spark and code is written in Hypothesis_Testing.py
 
-			   2) Locality Sensitive Hashing
+2) Locality Sensitive Hashing
 
-			   3) Deep Learning
-
-					Here we train we custom designed Feed forward NN architecture using Keras Dense Layers.
-					Train using distributed tensorflow (MirroredStrategy and MultiWorkerMirroredStrategy).
+3) Deep Learning
+Here we train we custom designed Feed forward NN architecture using Keras Dense Layers.
+Train using distributed tensorflow (MirroredStrategy and MultiWorkerMirroredStrategy).
 
 
 
