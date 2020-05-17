@@ -13,26 +13,31 @@ We have student's Feedback data which has information about student, student's f
 ### Data Frames: - 
 1) Spark
 As data is very large around 20 GB, to handle it distributedly, we are using spark framework throughout the project.
-
+  - code: Hypothesis_Testing.py, similarity_search_LSH.py
+  
 2) Tensorflow
 Here we are using student's Feedback data (X) and their performance data (Y) to train our model and predict performances in Subject based on students feed_back data
-We have used spark, Tensorflow (MirroredStrategy - Synchronous All Reduce) and code is written in learn_perf.py ( train_and_eval method)
+We have used spark, Tensorflow (MirroredStrategy - Synchronous All Reduce).
+  - code: learn_perf.py ( train_and_eval method)
 
 3) HDFS
-Data is always stored on  the hdfs with replication=3. Used for the distributed processing for spark.
+Data is always stored on  the hdfs with replication=3. Used for the distributed processing for spark. Used throught out the project.
+  - code: learn_perf.py, Hypothesis_Testing.py, similarity_search_LSH.py
 
-### Concepts:-     
+### Concepts:- 
 1) Hypothesis Testing					
 Here for any given goal completion, we have tried to pick top 20 and bottom 20 features which affect the completion of goal most/least.
-we have used spark and code is written in Hypothesis_Testing.py
+ - code: Hypothesis_Testing.py
 
 2) Locality Sensitive Hashing
 Here we tried to find similar schools and areas from students feedback about school.
+ - code: similarity_search_LSH.py
 
 3) Deep Learning
 Here we train we custom designed Feed forward NN architecture using Keras Dense Layers.
 Train using distributed tensorflow (MirroredStrategy and MultiWorkerMirroredStrategy).
-
+ - code: learn_perf.py
+ 
 Packages used:
 
 PISA dataset files were in sas7bdat format which was converted to CSV format using the following package. 
