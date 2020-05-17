@@ -1,7 +1,7 @@
 '''
     author Rishabh Goel and Aakash Deep
     CSE544 Spring 2020 Project
-Motivation: FINDING SIMILAR SCHOOLS OR AREAS TO SUGGEST INSIGHTS
+Motivation: FINDING SIMILAR SCHOOLS AND AREAS TO SUGGEST INSIGHTS
     FOR SDG 4
 Task: Find similar schools from survey feedback collected from students
 Approach:
