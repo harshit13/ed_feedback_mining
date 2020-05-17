@@ -16,13 +16,19 @@ Approach:
             each gpu have their parameter and update each other synchronously
         b) MULTIMIRRORED - multi node multi-gpu, synchronous all reduce,
             each node communicate with each other in round-robin fashion,
-            using RPCs [IMPLEMENTED THIS, BUT unable to use, due to lack of resources]
+            using RPCs.
     - Ouput the tensorboard graph
 Data Pipeline and algo used
     - PySpark - used dataframe context instead of older RDD context
     - HDFS - repliction factor=3 [For Spark Processing on GCP Data Proc]
-    - Tensorflow - distributed mirrored strategy
+    - Tensorflow - distributed mirrored strategy [see from line no. 373]
     - Deep Learning - [GCP Compute Engine VM with 2 GPUS nvidia t4]
+    
+    System Used:
+    - GCP Data Proc cluster with 1 master node 2 worker node
+    - GCP Compute Engine [2 NVDIA T4 GPU]
+
+    
 '''
 
 from pyspark.sql import *
